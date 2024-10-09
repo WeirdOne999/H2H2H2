@@ -10,6 +10,11 @@ public class MouseOver : MonoBehaviour
         IsMouseOver = false;
     }
 
+    private void OnEnable()
+    {
+        IsMouseOver = false;
+    }
+
     private void OnMouseOver()
     {
         IsMouseOver = true;

@@ -27,7 +27,7 @@ public class CounterMovement : MonoBehaviour
     private CharacterLookAt CLA;
     private SpriteRenderer SR;
 
-    public GameObject itemHolder;
+    public List<GameObject> itemHolder  = new List<GameObject>();
     void Start()
     {
         temp = MainCharacter.transform.position;
@@ -38,10 +38,15 @@ public class CounterMovement : MonoBehaviour
 
         //foreach (GameObject go in itemHolder.chil)
 
-        for (int i  =0;  i < itemHolder.transform.childCount; i++)
+        for (int j = 0; j < itemHolder.Count; j++)
         {
-            if (itemHolder.transform.GetChild(i).tag == "Item") listOfInteractables.Add(itemHolder.transform.GetChild(i).gameObject);
+            for (int i = 0; i < itemHolder[j].transform.childCount; i++)
+            {
+                Debug.Log("Child: " + i);
+                if (itemHolder[j].transform.GetChild(i).CompareTag("Item")) listOfInteractables.Add(itemHolder[j].transform.GetChild(i).gameObject);
+            }
         }
+        
     }
 
     // Update is called once per frame

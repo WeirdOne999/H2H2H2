@@ -46,6 +46,9 @@ public class NPCManager : MonoBehaviour
 
     public void CurrentCustomerLeave()
     {
+
+        GameObject.Find("Main Camera").GetComponent<StarSystem>().AddRating(Random.Range(0, 6));
+
         current[0].GetComponent<NPC>().StartMovement(leave.transform.position.x);
         current[0].GetComponent<NPC>().HappySprite();
         current.Remove(current[0]);

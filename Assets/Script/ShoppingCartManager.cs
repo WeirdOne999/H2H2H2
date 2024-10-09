@@ -30,6 +30,8 @@ public class ShoppingCartManager : MonoBehaviour
 
     public NPCManager npcMan;
 
+    public GameObject currentClick;
+
     private void Start()
     {
         RT = GetComponent<RectTransform>();
@@ -85,6 +87,8 @@ public class ShoppingCartManager : MonoBehaviour
             {
                 cart[currentPosition].transform.GetChild(i).gameObject.SetActive(true);
             }
+
+            currentClick.SetActive(false);
 
             currentPosition++;
 

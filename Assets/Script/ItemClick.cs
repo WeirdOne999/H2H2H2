@@ -7,10 +7,13 @@ public class ItemClick : MonoBehaviour
 {
     private MouseOver MO;
     public UnityEvent Events;
+    private ShoppingCartManager SCM;
+
     // Start is called before the first frame update
     void Start()
     {
         MO = GetComponent<MouseOver>();
+        SCM = GameObject.Find("Cart Item").GetComponent<ShoppingCartManager>();
     }
 
     // Update is called once per frame
@@ -20,6 +23,7 @@ public class ItemClick : MonoBehaviour
         {
             if(MO.IsMouseOver)
             {
+                SCM.currentClick = this.gameObject;
                 Events.Invoke();
             }
         }
