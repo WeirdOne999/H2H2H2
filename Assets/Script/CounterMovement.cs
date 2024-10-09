@@ -26,6 +26,8 @@ public class CounterMovement : MonoBehaviour
 
     private CharacterLookAt CLA;
     private SpriteRenderer SR;
+
+    public GameObject itemHolder;
     void Start()
     {
         temp = MainCharacter.transform.position;
@@ -33,6 +35,13 @@ public class CounterMovement : MonoBehaviour
         startY = pos.y;
         CLA = GetComponent<CharacterLookAt>();
         SR = GetComponent<SpriteRenderer>();
+
+        //foreach (GameObject go in itemHolder.chil)
+
+        for (int i  =0;  i < itemHolder.transform.childCount; i++)
+        {
+            if (itemHolder.transform.GetChild(i).tag == "Item") listOfInteractables.Add(itemHolder.transform.GetChild(i).gameObject);
+        }
     }
 
     // Update is called once per frame
@@ -49,7 +58,7 @@ public class CounterMovement : MonoBehaviour
         float tempFloat = (MainCharacter.transform.position.x - temp.x);
         if (tempFloat != 0 && GOTSINE)
         {
-            Debug.Log("SinCurve: " + tempFloat);
+            //Debug.Log("SinCurve: " + tempFloat);
             float yCurve = Mathf.Sin(sinTimer * freqOfSin) * heightOfSine + heightAlteration;
             Vector3 newTemp = MainCharacter.transform.position;
             newTemp.y += yCurve;
