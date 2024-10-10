@@ -16,6 +16,8 @@ public class NPC : MonoBehaviour
     private float sinTimer = 0f;
     private float startY;
 
+    public int CheckpointNumber;
+
     public Sprite Back;
     public Sprite Happy;
     public Sprite Sad;

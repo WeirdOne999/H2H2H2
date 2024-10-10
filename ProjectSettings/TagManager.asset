@@ -8,6 +8,7 @@ TagManager:
   - Mouse
   - Item
   - MouseItem
+  - Stones
   layers:
   - Default
   - TransparentFX

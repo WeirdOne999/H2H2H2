@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -13,6 +14,7 @@ public class NPCManager : MonoBehaviour
         public Sprite Happy;
         public Sprite Sad;
         public Sprite Back;
+        public int CheckPoint;
     }
 
     public List<npcTemplate> npcHolder = new List<npcTemplate>();
@@ -25,7 +27,7 @@ public class NPCManager : MonoBehaviour
     public GameObject end;
     public GameObject leave;
 
-    private List<GameObject> current  =  new List<GameObject>();
+    public List<GameObject> current  =  new List<GameObject>();
 
     private void Start()
     {
@@ -41,6 +43,7 @@ public class NPCManager : MonoBehaviour
         temp.GetComponent<NPC>().Happy = npcHolder[temps].Happy;
         temp.GetComponent<SpriteRenderer>().sprite = npcHolder[temps].Happy;
         temp.GetComponent<NPC>().StartMovement(end.transform.position.x);
+        temp.GetComponent<NPC>().CheckpointNumber = npcHolder[temps].CheckPoint;
         current.Add(temp);
     }
 
