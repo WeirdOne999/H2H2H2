@@ -4684,50 +4684,65 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npcHolder:
   - name: Aqil
-    Happy: {fileID: 21300000, guid: 5f207f5ad70d5f94780412a11aa55ccf, type: 3}
+    Happy: {fileID: 21300000, guid: 16193c61d1a861840afd8b23034c7437, type: 3}
     Sad: {fileID: 21300000, guid: 8b1a08d3eb4a20641a4508cdc2d29849, type: 3}
     Back: {fileID: 21300000, guid: ad3eb559205cf714d9dc3e135342809d, type: 3}
     CheckPoint: 0
   - name: Jerrick
-    Happy: {fileID: 21300000, guid: 365251c61f0bddf4da3ebcae0ecaab0d, type: 3}
-    Sad: {fileID: 21300000, guid: ca7a770f390eed34b9748547ab3ec72c, type: 3}
+    Happy: {fileID: 21300000, guid: 87b31bcab8f783e439aedf1a863ed544, type: 3}
+    Sad: {fileID: 21300000, guid: 68789c07037e2e44489bb4ccc3cf6893, type: 3}
     Back: {fileID: 21300000, guid: 23e2f289e10e1c144a9153860565f48b, type: 3}
     CheckPoint: 0
   - name: Little Boy
-    Happy: {fileID: 21300000, guid: cc65afd49ae27fb43bce29c77f32593f, type: 3}
-    Sad: {fileID: 21300000, guid: b5c6eafc4445a814f91a46ba704dfda4, type: 3}
-    Back: {fileID: 21300000, guid: a9e1d1008163eeb4fa0b207af86ae7ec, type: 3}
+    Happy: {fileID: 21300000, guid: d21d0f0b19ddb8049bea0e3e0ec6d249, type: 3}
+    Sad: {fileID: 21300000, guid: 84d2ea992c726fb48bc2c0679652ca13, type: 3}
+    Back: {fileID: 21300000, guid: 68f90f06beb0c9049be7eb63b03db84b, type: 3}
     CheckPoint: 0
   - name: Little Girl
-    Happy: {fileID: 21300000, guid: f80134162caf5974387c79f6d62110d8, type: 3}
+    Happy: {fileID: 21300000, guid: 24924146db9c25e469f8cf32c7b4010d, type: 3}
     Sad: {fileID: 21300000, guid: 42bb3a334618bf8469fd71769d166aaf, type: 3}
     Back: {fileID: 21300000, guid: 9012d9c525131b4438ed230ccb169557, type: 3}
     CheckPoint: 0
   - name: Middled Aged Malay Woman
-    Happy: {fileID: 21300000, guid: 8c3e85cdff2e03048849ca2fe75ed164, type: 3}
+    Happy: {fileID: 21300000, guid: e0b79ebd21539b542bbfc91c96e01a1a, type: 3}
     Sad: {fileID: 21300000, guid: 70bef4529a1f43a48af2c4b8a5105d48, type: 3}
     Back: {fileID: 21300000, guid: cd501c9064654d8438695ed6cda625a0, type: 3}
     CheckPoint: 0
   - name: Middled Aged Chinese Man
-    Happy: {fileID: 21300000, guid: b52eafe8079286e48bf0cf9fb63bf5e5, type: 3}
+    Happy: {fileID: 21300000, guid: 41c6633a86b55904198e98e715a40745, type: 3}
     Sad: {fileID: 21300000, guid: 8b505330a03c8c444a72e4545cfbe67c, type: 3}
     Back: {fileID: 21300000, guid: 766c8de6df61f86428c8f78a1d1770e9, type: 3}
     CheckPoint: 0
   - name: Old Indian Woman
-    Happy: {fileID: 21300000, guid: 451bdc7afc7953a439a192d264e19c12, type: 3}
+    Happy: {fileID: 21300000, guid: f0d90f41af1d19f4eb6068b226fcea95, type: 3}
     Sad: {fileID: 21300000, guid: e9e8bf0bd2f0d284e90ef8875438d2db, type: 3}
     Back: {fileID: 21300000, guid: 809734a1a2c3fc64a8b62f591ae165b9, type: 3}
     CheckPoint: 0
   - name: Shelby
-    Happy: {fileID: 21300000, guid: ff4144a4145ac3c478c8d23200d201e1, type: 3}
-    Sad: {fileID: 21300000, guid: 38f2123f942d5e34390978b5aa587c58, type: 3}
+    Happy: {fileID: 21300000, guid: e16af4c34c0ec7b40bf1933995c62466, type: 3}
+    Sad: {fileID: 21300000, guid: 3ee56ff7188731c49a52bfec6c0454c8, type: 3}
     Back: {fileID: 21300000, guid: cf1d783866c551c4591192686132522c, type: 3}
     CheckPoint: 0
   - name: Shi Ying
-    Happy: {fileID: 21300000, guid: 8c8406398e791e148b365d237799c712, type: 3}
-    Sad: {fileID: 21300000, guid: 457a6f17fb7f1bd4788118a5c5c61280, type: 3}
+    Happy: {fileID: 21300000, guid: 50a74c0934c0a5b449a9956cfc317f30, type: 3}
+    Sad: {fileID: 21300000, guid: 3734df8ba0937924e8f28eef0ce8aea3, type: 3}
     Back: {fileID: 21300000, guid: ae9acb1b37669994cbfd825ae7379690, type: 3}
     CheckPoint: 0
+  - name: small little girl
+    Happy: {fileID: 21300000, guid: 14d3c48e91bbe1b49aac5ca230772a77, type: 3}
+    Sad: {fileID: 21300000, guid: 14d3c48e91bbe1b49aac5ca230772a77, type: 3}
+    Back: {fileID: 21300000, guid: 9698d7f844a9bbb4e90c0daedd849df9, type: 3}
+    CheckPoint: 1
+  - name: middle girl
+    Happy: {fileID: 21300000, guid: 73a4a3bf12b561146a0853e4592ca66f, type: 3}
+    Sad: {fileID: 21300000, guid: 73a4a3bf12b561146a0853e4592ca66f, type: 3}
+    Back: {fileID: 21300000, guid: 920529c1bd7b76f42a5bcb853353d472, type: 3}
+    CheckPoint: 2
+  - name: steve
+    Happy: {fileID: 21300000, guid: 239af5dd9ba751440a3854f7a1e52395, type: 3}
+    Sad: {fileID: 21300000, guid: 239af5dd9ba751440a3854f7a1e52395, type: 3}
+    Back: {fileID: 21300000, guid: 1a5852600116a084e8bbb569761026c0, type: 3}
+    CheckPoint: 3
   prefab: {fileID: 1807096193649421269, guid: 6f8f511012c276a47b31ae9650a8ec38, type: 3}
   start: {fileID: 872400714}
   end: {fileID: 1118750121}

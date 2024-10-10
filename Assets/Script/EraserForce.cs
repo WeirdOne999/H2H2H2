@@ -59,7 +59,7 @@ public class EraserForce : MonoBehaviour
 
     public void InverseFlickEraer(Vector3 v2)
     {
-        Timer = 0f;
+        Timer = 0f; 
         OnTurn = true;
         rb.AddForce((-(this.transform.position - v2)) * flickPower);
 

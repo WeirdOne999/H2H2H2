@@ -893,9 +893,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9a0635a02745fe48bb881d915cd260b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Normal: {fileID: 21300000, guid: 58221a0d0773d384888f2cac60b56e97, type: 3}
-  Grab: {fileID: 21300000, guid: 8d8e8cb506f71b74a905d2e60aa8a532, type: 3}
-  Catch: {fileID: 21300000, guid: ebb7fd2d194ad804b83e3e74bfc4f93e, type: 3}
+  Normal: {fileID: 21300000, guid: f51db2ee52f043d4db0304db41931264, type: 3}
+  Grab: {fileID: 21300000, guid: e5b7faed4a361fc4a9374e93d45b0670, type: 3}
+  Catch: {fileID: 21300000, guid: 49835b0a3da761841899ce8e351c2cf3, type: 3}
   StoneCount: 0
   grabTime: 0
   grabbed: 0
@@ -945,7 +945,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ebb7fd2d194ad804b83e3e74bfc4f93e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 484e2b15718d870488a20a5c6345c068, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -953,7 +953,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &980616339
