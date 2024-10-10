@@ -23,8 +23,8 @@ public class TopsSpin : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
 
-
-        spinbutton.SetActive(true);
+        StartSpinning();
+        
     }
 
     // Update is called once per frame
@@ -33,13 +33,7 @@ public class TopsSpin : MonoBehaviour
         Debug.Log(rb.totalTorque);
 
 
-        if (rb.angularVelocity < 500)
-        {
-            spinbutton.SetActive(true);
-        }else
-        {
-            spinbutton.SetActive(false);
-        }
+       
     }
 
     private void FixedUpdate()
@@ -47,23 +41,23 @@ public class TopsSpin : MonoBehaviour
         
         if (Input.GetKey(KeyCode.W))
         {
-            rb.AddForce(transform.up * force);  
-            direction = transform.up;
+            rb.AddForce(Vector2.up * force);  
+            direction = Vector2.up;
         }
         if (Input.GetKey(KeyCode.S))
         {
-            rb.AddForce(-transform.up * force); 
-            direction = -transform.up;
+            rb.AddForce(-Vector2.up * force); 
+            direction = -Vector2.up;
         }
         if (Input.GetKey(KeyCode.A))
         {
-            rb.AddForce(-transform.right * force);
-            direction = -transform.right;
+            rb.AddForce(-Vector2.right * force);
+            direction = -Vector2.right;
         }
         if (Input.GetKey(KeyCode.D))
         {
-            rb.AddForce(transform.right * force); 
-            direction = transform.right;
+            rb.AddForce(Vector2.right * force); 
+            direction = Vector2.right;
         }
     }
 
