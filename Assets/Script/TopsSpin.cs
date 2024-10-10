@@ -18,6 +18,10 @@ public class TopsSpin : MonoBehaviour
 
     public GameObject spinbutton;
 
+    public AudioSource source;
+    public AudioClip topspinning;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -69,5 +73,7 @@ public class TopsSpin : MonoBehaviour
     {
         rb.AddTorque(500f);
         spinning = true;
+
+        source.PlayOneShot(topspinning);
     }
 }

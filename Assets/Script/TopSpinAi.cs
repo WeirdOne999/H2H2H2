@@ -8,6 +8,8 @@ public class TopSpinAi : MonoBehaviour
     private Rigidbody2D rb;
     public float force;
     public GameObject player;
+    public AudioSource source;
+    public AudioClip clip;
 
     // Start is called before the first frame update
     void Start()
