@@ -22,6 +22,8 @@ public class TopsSpin : MonoBehaviour
 
     private float timerCount = 0f;
 
+    public JoyStickLogic JSL;
+
 
     // Start is called before the first frame update
 
@@ -64,7 +66,7 @@ public class TopsSpin : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (spinning == true)
+        /*if (spinning == true)
         {
             if (Input.GetKey(KeyCode.W))
             {
@@ -86,7 +88,11 @@ public class TopsSpin : MonoBehaviour
                 rb.AddForce(Vector2.right * force);
                 direction = Vector2.right;
             }
-        }
+        }*/
+
+       
+
+        rb.AddForce(-JSL.diff.normalized * force);
     }
 
     public void StopSpinning()

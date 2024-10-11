@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
@@ -51,6 +52,9 @@ public class ShoppingCartManager : MonoBehaviour
     public AudioClip kaching;
     public AudioClip bubble;
     public AudioClip Exclaim;
+
+    public UnityEvent happyHan;
+    public UnityEvent AngryHan;
     private void Start()
     {
         RT = GetComponent<RectTransform>();
@@ -82,6 +86,7 @@ public class ShoppingCartManager : MonoBehaviour
             if (timeRemaining <= 0 && cart.Count != 0)
             {
                 //End Customer
+                AngryHan.Invoke();
                 foreach (GameObject item in cart)
                 {
                     Destroy(item);
@@ -164,6 +169,7 @@ public class ShoppingCartManager : MonoBehaviour
 
             if (currentPosition == count)
             {
+
                 source.PlayOneShot(kaching);
                 //End Customer
                 foreach (GameObject item in cart)
@@ -179,6 +185,7 @@ public class ShoppingCartManager : MonoBehaviour
                 Esclamation.SetActive(false);
                 Esclamation2.SetActive(false);
                 Esclamation3.SetActive(false);
+                happyHan.Invoke();
             }
         }
     }

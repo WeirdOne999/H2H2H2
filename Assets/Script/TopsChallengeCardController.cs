@@ -13,12 +13,16 @@ public class TopsChallengeCardController : MonoBehaviour
 
     private void Start()
     {
-        Hide.Invoke();
     }
 
     private void Update()
     {
         temp += Time.deltaTime;
+
+        if (temp > 0.1f && temp< 1.1f)
+        {
+            Hide.Invoke();
+        }
 
         if (temp > 5.0f)
         {

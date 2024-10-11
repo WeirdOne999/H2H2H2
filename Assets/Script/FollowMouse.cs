@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.Events;
 public class FollowMouse : MonoBehaviour
 {
-
-    // Update is called once per frame
     void Update()
     {
-        this.transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector3 v3 = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        v3.z = -1;
+        Debug.Log(v3);
+
     }
 }
