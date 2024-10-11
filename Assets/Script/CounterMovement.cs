@@ -27,6 +27,9 @@ public class CounterMovement : MonoBehaviour
     private CharacterLookAt CLA;
     private SpriteRenderer SR;
 
+    public AudioSource source;
+    public AudioClip clip;
+
     public List<GameObject> itemHolder  = new List<GameObject>();
     void Start()
     {

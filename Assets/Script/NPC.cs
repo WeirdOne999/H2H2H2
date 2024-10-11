@@ -33,6 +33,7 @@ public class NPC : MonoBehaviour
     {
         if (startSin) sinTimer += Time.deltaTime;
         transform.position = Vector3.MoveTowards(transform.position, temp, speed);
+
         float tempFloat = (transform.position.x - temp.x);
         if (tempFloat != 0 && GOTSINE)
         {

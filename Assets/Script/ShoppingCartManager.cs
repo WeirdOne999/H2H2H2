@@ -47,6 +47,10 @@ public class ShoppingCartManager : MonoBehaviour
     public float foreachitem;
     public float extratime;
 
+    public AudioSource source;
+    public AudioClip kaching;
+    public AudioClip bubble;
+    public AudioClip Exclaim;
     private void Start()
     {
         RT = GetComponent<RectTransform>();
@@ -104,20 +108,24 @@ public class ShoppingCartManager : MonoBehaviour
         else if(npcMan.current[0].GetComponent<NPC>().CheckpointNumber == 1)
         {
             Esclamation.SetActive(true);
+            source.PlayOneShot(Exclaim);    
         }
         else if (npcMan.current[0].GetComponent<NPC>().CheckpointNumber == 2)
         {
             Esclamation2.SetActive(true);
+            source.PlayOneShot(Exclaim);
         }
         else if (npcMan.current[0].GetComponent<NPC>().CheckpointNumber == 3)
         {
             Esclamation3.SetActive(true);
+            source.PlayOneShot(Exclaim);
         }
     }
 
     public void NewOrder(int orderCount)
     {
         SpeechBubble.SetActive(true);
+        source.PlayOneShot(bubble);
         SliderGO.SetActive(true);
         timerForCustomer = orderCount * foreachitem + extratime;
         timeRemaining = timerForCustomer;
@@ -144,6 +152,7 @@ public class ShoppingCartManager : MonoBehaviour
         Debug.Log("Click on " + name);
         if (OrderOfCustomers[currentPosition] == name)
         {
+            
             for (int i = 0; i < cart[currentPosition].transform.childCount; i++)
             {
                 cart[currentPosition].transform.GetChild(i).gameObject.SetActive(true);
@@ -155,6 +164,7 @@ public class ShoppingCartManager : MonoBehaviour
 
             if (currentPosition == count)
             {
+                source.PlayOneShot(kaching);
                 //End Customer
                 foreach (GameObject item in cart)
                 {
