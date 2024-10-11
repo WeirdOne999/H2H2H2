@@ -24,10 +24,22 @@ public class TopsSpin : MonoBehaviour
 
 
     // Start is called before the first frame update
-    void Start()
+
+    private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        // Reset Rigidbody state and variables on scene reload
+        rb.velocity = Vector2.zero;
+        rb.angularVelocity = 0;
+        spinning = true;
+        Debug.Log("TEST: " + spinning);
+        StartSpinning();
+        Debug.Log("TEST2: " + spinning);
+    }
 
+    public void SpinAgain()
+    {
+        rb = GetComponent<Rigidbody2D>();
         // Reset Rigidbody state and variables on scene reload
         rb.velocity = Vector2.zero;
         rb.angularVelocity = 0;

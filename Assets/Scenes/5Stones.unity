@@ -3579,8 +3579,13 @@ MonoBehaviour:
           m_Calls: []
       characterSprite: {fileID: 104547696}
       DialogueSprite: {fileID: 104547695}
-    - text: "Being by Uncle Han\u2019s side for years, they have enjoyed sights and
-        sounds of Singapore together. "
+    - text: "Being by Uncle Han\u2019s side for years, they have enjoyed sights"
+      unityEvent:
+        m_PersistentCalls:
+          m_Calls: []
+      characterSprite: {fileID: 104547696}
+      DialogueSprite: {fileID: 104547695}
+    - text: 'and sounds of Singapore together. '
       unityEvent:
         m_PersistentCalls:
           m_Calls: []
@@ -3646,8 +3651,13 @@ MonoBehaviour:
           m_Calls: []
       characterSprite: {fileID: 104547696}
       DialogueSprite: {fileID: 104547693}
-    - text: 'Uncle Han looked wistfully into the distance, feeling sentimental from
-        all the conversations he had today. '
+    - text: Uncle Han looked wistfully into the distance, feeling sentimental
+      unityEvent:
+        m_PersistentCalls:
+          m_Calls: []
+      characterSprite: {fileID: 104547696}
+      DialogueSprite: {fileID: 104547695}
+    - text: 'from all the conversations he had today. '
       unityEvent:
         m_PersistentCalls:
           m_Calls: []

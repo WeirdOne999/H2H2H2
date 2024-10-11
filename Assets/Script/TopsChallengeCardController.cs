@@ -23,6 +23,7 @@ public class TopsChallengeCardController : MonoBehaviour
         if (temp > 5.0f)
         {
             Show.Invoke();
+            Destroy(this);
         }
     }
 }
