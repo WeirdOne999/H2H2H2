@@ -7,6 +7,8 @@ public class StoneCatch : MonoBehaviour
 {
     public ArmFollowX AFX;
     public StoneCount SC;
+    public AudioSource source;
+    public AudioClip dropbag;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -22,5 +24,7 @@ public class StoneCatch : MonoBehaviour
         AFX.StoneCount++;
         SC.StoneOnFloor--;
         AFX.CheckForWin();
+
+        source.PlayOneShot(dropbag);
     }
 }

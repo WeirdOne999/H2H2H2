@@ -32,6 +32,9 @@ public class ArmFollowX : MonoBehaviour
 
     public UnityEvent ue;
 
+    public AudioSource source;
+    public AudioClip throwbag;
+   
 
     private void Start()
     {
@@ -76,6 +79,7 @@ public class ArmFollowX : MonoBehaviour
                     Stones[0].GetComponent<SpriteRenderer>().enabled = true;
                     Stones[0].GetComponent<StoneHIdeAndShow>().Show();
 
+                    source.PlayOneShot(throwbag);
                     Stones[0].transform.position = this.transform.position + new Vector3(0,1,0);
 
                     Stones[0].GetComponent<Rigidbody2D>().AddForce(Vector2.up * throwMultiplier);

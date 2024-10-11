@@ -10,6 +10,8 @@ public class StoneTriggerArm : MonoBehaviour
     public List<GameObject> targets;
     public ArmFollowX AFX;
     public StoneCount SC;
+    public AudioSource source;
+    public AudioClip throwbag;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -43,6 +45,7 @@ public class StoneTriggerArm : MonoBehaviour
                 AFX.grabbed = true;
                 AFX.ArmClose();
                 SC.StoneOnFloor--;
+                source.PlayOneShot(throwbag);
             }
         }
     }
