@@ -164,6 +164,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6235878381692838723, guid: f06678fbcbba8a24aadbafd7bbe70b50, type: 3}
   m_PrefabInstance: {fileID: 1973947453}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &392260061 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4611243671197985838, guid: 040617beabb550b42adcc04b84e8f0d4, type: 3}
+  m_PrefabInstance: {fileID: 1837031607}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &417225765
 GameObject:
   m_ObjectHideFlags: 0
@@ -951,6 +956,7 @@ GameObject:
   - component: {fileID: 1543678926}
   - component: {fileID: 1543678925}
   - component: {fileID: 1543678924}
+  - component: {fileID: 1543678929}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1108,6 +1114,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1543678929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1543678923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8280c703423afcd48853fe00e15e7b34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1659831659
 GameObject:
   m_ObjectHideFlags: 0
@@ -1421,13 +1439,83 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4611243671197985838, guid: 040617beabb550b42adcc04b84e8f0d4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1837031613}
   m_SourcePrefab: {fileID: 100100000, guid: 040617beabb550b42adcc04b84e8f0d4, type: 3}
 --- !u!224 &1837031608 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5903845530584382137, guid: 040617beabb550b42adcc04b84e8f0d4, type: 3}
   m_PrefabInstance: {fileID: 1837031607}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1837031613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 392260061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b508e8d84817214681de12e59b2033f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Show:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1543678929}
+        m_TargetAssemblyTypeName: ShowAndHide, Assembly-CSharp
+        m_MethodName: Show
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1956002365}
+        m_TargetAssemblyTypeName: ShowAndHide, Assembly-CSharp
+        m_MethodName: Show
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  Hide:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1543678929}
+        m_TargetAssemblyTypeName: ShowAndHide, Assembly-CSharp
+        m_MethodName: Hide
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1956002365}
+        m_TargetAssemblyTypeName: ShowAndHide, Assembly-CSharp
+        m_MethodName: Hide
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  temp: 0
 --- !u!1 &1841340440
 GameObject:
   m_ObjectHideFlags: 0
@@ -1571,6 +1659,7 @@ GameObject:
   - component: {fileID: 1956002361}
   - component: {fileID: 1956002360}
   - component: {fileID: 1956002364}
+  - component: {fileID: 1956002365}
   m_Layer: 0
   m_Name: AI
   m_TagString: NPC
@@ -1724,6 +1813,18 @@ MonoBehaviour:
   centre: {fileID: 169178120}
   moveSpeed: 50
   radius: 4
+--- !u!114 &1956002365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1956002359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8280c703423afcd48853fe00e15e7b34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1973947453
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2228,8 +2329,14 @@ MonoBehaviour:
           m_Calls: []
       characterSprite: {fileID: 1973947457}
       DialogueSprite: {fileID: 299740421}
-    - text: 'The young lady in front of him looked disheveled. She looked as if she
-        had just finished a 10 hour shift without any sleep prior. '
+    - text: The young lady in front of him looked disheveled.
+      unityEvent:
+        m_PersistentCalls:
+          m_Calls: []
+      characterSprite: {fileID: 1973947457}
+      DialogueSprite: {fileID: 1973947456}
+    - text: 'She looked as if she had just finished a 10 hour shift without any sleep
+        prior. '
       unityEvent:
         m_PersistentCalls:
           m_Calls: []
@@ -2299,24 +2406,41 @@ MonoBehaviour:
           m_Calls: []
       characterSprite: {fileID: 1973947457}
       DialogueSprite: {fileID: 1973947456}
-    - text: "Honestly uncle, I am tired. My husband and I just got married, and reno
-        was quite expensive so I\u2019m working extra shifts to bring our funds back
-        again! It\u2019s all so much."
+    - text: Honestly uncle, I am tired. My husband and I just got married,
+      unityEvent:
+        m_PersistentCalls:
+          m_Calls: []
+      characterSprite: {fileID: 1973947457}
+      DialogueSprite: {fileID: 299740421}
+    - text: "and reno was quite expensive so I\u2019m working extra shifts to bring
+        our funds back again! It\u2019s all so much."
       unityEvent:
         m_PersistentCalls:
           m_Calls: []
       characterSprite: {fileID: 1973947457}
       DialogueSprite: {fileID: 299740421}
     - text: ".. And moving so far from home and getting used to our different cultures,
-        it\u2019s quite challenging.. It\u2019s so much to get used to."
+        it\u2019s quite challenging.."
+      unityEvent:
+        m_PersistentCalls:
+          m_Calls: []
+      characterSprite: {fileID: 1973947457}
+      DialogueSprite: {fileID: 299740421}
+    - text: "It\u2019s so much to get used to."
       unityEvent:
         m_PersistentCalls:
           m_Calls: []
       characterSprite: {fileID: 1973947457}
       DialogueSprite: {fileID: 299740421}
     - text: "Uncle Han nodded in understanding. He\u2019d experienced similar feelings
-        when he had to move from his kampong to the newly constructed HDBs back in
-        the day. He noted something odd, though. "
+        when he had to move from"
+      unityEvent:
+        m_PersistentCalls:
+          m_Calls: []
+      characterSprite: {fileID: 1973947457}
+      DialogueSprite: {fileID: 1973947456}
+    - text: 'his kampong to the newly constructed HDBs back in the day. He noted
+        something odd, though. '
       unityEvent:
         m_PersistentCalls:
           m_Calls: []
@@ -2328,20 +2452,25 @@ MonoBehaviour:
           m_Calls: []
       characterSprite: {fileID: 1973947457}
       DialogueSprite: {fileID: 360485687}
-    - text: My husband is Indian, uncle! He was my classmate.. Then we found out
-        we stayed at the opposite blocks! We studied together a looot. The rest is
-        history..
+    - text: My husband is Indian, uncle! He was my classmate..
       unityEvent:
         m_PersistentCalls:
           m_Calls: []
       characterSprite: {fileID: 1973947457}
       DialogueSprite: {fileID: 299740421}
-    - text: 
+    - text: Then we found out we stayed at the opposite blocks! We studied together
+        a looot.
       unityEvent:
         m_PersistentCalls:
           m_Calls: []
       characterSprite: {fileID: 1973947457}
-      DialogueSprite: {fileID: 0}
+      DialogueSprite: {fileID: 299740421}
+    - text: The rest is history..
+      unityEvent:
+        m_PersistentCalls:
+          m_Calls: []
+      characterSprite: {fileID: 1973947457}
+      DialogueSprite: {fileID: 299740421}
     - text: "Different cultures? What\u2019s different?"
       unityEvent:
         m_PersistentCalls:
@@ -2363,15 +2492,37 @@ MonoBehaviour:
       characterSprite: {fileID: 1973947457}
       DialogueSprite: {fileID: 1973947456}
     - text: "Anyways yeah.. It\u2019s been hard. Both our parents don\u2019t know
-        how to speak the other language, and there\u2019s all these customs we both
-        have to get used to.. I feel a bit stupid when I forget some of them!"
+        how to speak the other language,"
       unityEvent:
         m_PersistentCalls:
           m_Calls: []
       characterSprite: {fileID: 1973947457}
       DialogueSprite: {fileID: 299740421}
-    - text: 'Uncle Han rarely had heart to hearts with his customers - He was usually
-        sarcastic and grumpy - that was part of his charm. '
+    - text: "and there\u2019s all these customs we both have to get used to.."
+      unityEvent:
+        m_PersistentCalls:
+          m_Calls: []
+      characterSprite: {fileID: 1973947457}
+      DialogueSprite: {fileID: 299740421}
+    - text: I feel a bit stupid when I forget some of them!
+      unityEvent:
+        m_PersistentCalls:
+          m_Calls: []
+      characterSprite: {fileID: 1973947457}
+      DialogueSprite: {fileID: 299740421}
+    - text: Uncle Han rarely had heart to hearts with his customers
+      unityEvent:
+        m_PersistentCalls:
+          m_Calls: []
+      characterSprite: {fileID: 1973947457}
+      DialogueSprite: {fileID: 1973947456}
+    - text: He was usually sarcastic and grumpy
+      unityEvent:
+        m_PersistentCalls:
+          m_Calls: []
+      characterSprite: {fileID: 1973947457}
+      DialogueSprite: {fileID: 1973947456}
+    - text: 'That was part of his charm. '
       unityEvent:
         m_PersistentCalls:
           m_Calls: []
@@ -2383,9 +2534,14 @@ MonoBehaviour:
           m_Calls: []
       characterSprite: {fileID: 1973947457}
       DialogueSprite: {fileID: 1973947456}
-    - text: "Back in the kampung days, these kind of couples were rarer.. Uncle doesn\u2019t
-        really know much about it! Thank you for sharing. It\u2019s good to learn
-        about different experiences!"
+    - text: Back in the kampung days, these kind of couples were rarer..
+      unityEvent:
+        m_PersistentCalls:
+          m_Calls: []
+      characterSprite: {fileID: 1973947457}
+      DialogueSprite: {fileID: 360485687}
+    - text: "Uncle doesn\u2019t really know much about it! Thank you for sharing.
+        It\u2019s good to learn about different experiences!"
       unityEvent:
         m_PersistentCalls:
           m_Calls: []
@@ -2406,8 +2562,13 @@ MonoBehaviour:
       characterSprite: {fileID: 1973947457}
       DialogueSprite: {fileID: 299740421}
     - text: "You are very optimistic ah girl, that\u2019s good. Last time when I
-        had to move over here from the kampong I was always so gloomy\u2026 Never
-        give up! Jiayou!"
+        had to move over-"
+      unityEvent:
+        m_PersistentCalls:
+          m_Calls: []
+      characterSprite: {fileID: 1973947457}
+      DialogueSprite: {fileID: 360485687}
+    - text: "-here from the kampong I was always so gloomy\u2026 Never give up! Jiayou!"
       unityEvent:
         m_PersistentCalls:
           m_Calls: []

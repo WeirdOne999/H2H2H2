@@ -16,6 +16,10 @@ public class StarSystem : MonoBehaviour
 
     public List<UnityEvent> loseEvents = new List<UnityEvent>();
 
+    public void ResetStar()
+    {
+        Stars = 5.0f;
+    }
     void Start()
     {
         widthStart = RT.sizeDelta.x;

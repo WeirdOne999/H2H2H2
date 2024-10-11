@@ -89,6 +89,7 @@ public class EraserManager : MonoBehaviour
                 }
                 PlayerTurn = !PlayerTurn;
                 TurnDone = false;
+                Player.GetComponent<PlayerEraserController>().oneClick = false;
             }
         }
     }

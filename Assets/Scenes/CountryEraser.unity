@@ -1498,7 +1498,7 @@ MonoBehaviour:
   nameText: {fileID: 0}
   dialogueText: {fileID: 904986992}
   dialogueSprite: {fileID: 0}
-  textSpeed: 0.1
+  textSpeed: 0.01
   DialogueIsRunning: 0
   unityEvent:
     m_PersistentCalls:
@@ -1536,8 +1536,13 @@ MonoBehaviour:
           m_Calls: []
       characterSprite: {fileID: 904986996}
       DialogueSprite: {fileID: 1539495194}
-    - text: "Avani giggled, used to Uncle Han\u2019s unapproachable demeanor. He
-        had always been grumpy, but never unkind. "
+    - text: "Avani giggled, used to Uncle Han\u2019s unapproachable demeanor."
+      unityEvent:
+        m_PersistentCalls:
+          m_Calls: []
+      characterSprite: {fileID: 904986996}
+      DialogueSprite: {fileID: 904986995}
+    - text: 'He had always been grumpy, but never unkind. '
       unityEvent:
         m_PersistentCalls:
           m_Calls: []
@@ -1604,34 +1609,40 @@ MonoBehaviour:
           m_Calls: []
       characterSprite: {fileID: 904986996}
       DialogueSprite: {fileID: 1539495194}
-    - text: "Aiya! I don\u2019t need to know all of them!"
-      unityEvent:
-        m_PersistentCalls:
-          m_Calls: []
-      characterSprite: {fileID: 904986996}
-      DialogueSprite: {fileID: 1539495194}
     - text: "Avani giggled at Uncle Han\u2019s exasperation. "
       unityEvent:
         m_PersistentCalls:
           m_Calls: []
       characterSprite: {fileID: 904986996}
       DialogueSprite: {fileID: 904986995}
-    - text: "It\u2019s not all that different in the HDB, Uncle. I still play games
-        at the playground behind with my friends! I like it here."
+    - text: "It\u2019s not all that different in the HDB, Uncle."
       unityEvent:
         m_PersistentCalls:
           m_Calls: []
       characterSprite: {fileID: 904986996}
       DialogueSprite: {fileID: 904986994}
-    - text: "Okay only la..\u201D"
+    - text: I still play games at the playground behind with my friends! I like it
+        here.
+      unityEvent:
+        m_PersistentCalls:
+          m_Calls: []
+      characterSprite: {fileID: 904986996}
+      DialogueSprite: {fileID: 904986994}
+    - text: Okay only la..
       unityEvent:
         m_PersistentCalls:
           m_Calls: []
       characterSprite: {fileID: 904986996}
       DialogueSprite: {fileID: 1539495194}
-    - text: 'Uncle Han sighed. He sorely missed his kampung days, even though it
-        had been decades ago. He had always longed to return to the free spaces and
-        stilt-supported houses he once called home. '
+    - text: Uncle Han sighed. He sorely missed his kampung days, even though it had
+        been decades ago.
+      unityEvent:
+        m_PersistentCalls:
+          m_Calls: []
+      characterSprite: {fileID: 904986996}
+      DialogueSprite: {fileID: 904986995}
+    - text: 'He had always longed to return to the free spaces and stilt-supported
+        houses he once called home. '
       unityEvent:
         m_PersistentCalls:
           m_Calls: []
@@ -1643,8 +1654,20 @@ MonoBehaviour:
           m_Calls: []
       characterSprite: {fileID: 904986996}
       DialogueSprite: {fileID: 904986995}
-    - text: Uncle!! I need to go home. I want to finish my homework fast so Ma will
-        let me come down and play with my neighbors! See you tomorrow uncle!!
+    - text: Uncle!! I need to go home.
+      unityEvent:
+        m_PersistentCalls:
+          m_Calls: []
+      characterSprite: {fileID: 904986996}
+      DialogueSprite: {fileID: 904986994}
+    - text: I want to finish my homework fast so Ma will let me come down and play
+        with my neighbors!
+      unityEvent:
+        m_PersistentCalls:
+          m_Calls: []
+      characterSprite: {fileID: 904986996}
+      DialogueSprite: {fileID: 904986994}
+    - text: See you tomorrow uncle!!
       unityEvent:
         m_PersistentCalls:
           m_Calls: []
@@ -1657,9 +1680,20 @@ MonoBehaviour:
           m_Calls: []
       characterSprite: {fileID: 904986996}
       DialogueSprite: {fileID: 904986995}
-    - text: 'Uncle Han was used to her erratic nature - it had been part of his daily
-        routine since she first challenged Uncle Han to a game of chess a few years
-        back.  '
+    - text: Uncle Han was used to her erratic nature
+      unityEvent:
+        m_PersistentCalls:
+          m_Calls: []
+      characterSprite: {fileID: 904986996}
+      DialogueSprite: {fileID: 904986995}
+    - text: It had been part of his daily routine since she first challenged Uncle
+        Han to a game of-
+      unityEvent:
+        m_PersistentCalls:
+          m_Calls: []
+      characterSprite: {fileID: 904986996}
+      DialogueSprite: {fileID: 904986995}
+    - text: '-chess a few years back.  '
       unityEvent:
         m_PersistentCalls:
           m_Calls: []

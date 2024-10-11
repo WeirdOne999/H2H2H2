@@ -13,6 +13,8 @@ public class PlayerEraserController : MonoBehaviour
 
     public float arrowLimit;
 
+    public bool oneClick = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,7 +28,7 @@ public class PlayerEraserController : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            if (MO.IsMouseOver)
+            if (MO.IsMouseOver && !oneClick)
             {
                 GotClick = true;
             }
@@ -37,8 +39,9 @@ public class PlayerEraserController : MonoBehaviour
             if (GotClick)
             {
                 Arrow.SetActive(false);
-                GotClick = false;
                 EF.FlickEraer(Camera.main.ScreenToWorldPoint(Input.mousePosition));
+                oneClick = true;
+                GotClick = false;
             }
         }
 
