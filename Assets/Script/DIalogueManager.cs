@@ -38,6 +38,8 @@ public class DialogueManager : MonoBehaviour
         {
             if (previousData.unityEvent != null)
             {
+                previousData.characterSprite.SetActive(false);
+                previousData.DialogueSprite.SetActive(false);
                 previousData.unityEvent.Invoke();
                 previousData.unityEvent = null;
             }
@@ -53,8 +55,9 @@ public class DialogueManager : MonoBehaviour
             }
 
             DialogueData sentence = dialogueQueue.Dequeue();
-            nameText.text = sentence.name;
-            dialogueSprite.gameObject.GetComponent<Image>().sprite = sentence.picture;
+            sentence.characterSprite.SetActive(true);
+            sentence.DialogueSprite.SetActive(true);
+
             DisplayNext(sentence);
         }
     }
@@ -73,8 +76,7 @@ public class DialogueManager : MonoBehaviour
         }
 
         DialogueData sentence = dialogueQueue.Dequeue();
-        nameText.text = sentence.name;
-        dialogueSprite.gameObject.GetComponent<Image>().sprite = sentence.picture;
+        
         DisplayNext(sentence);
     }
 
@@ -83,8 +85,9 @@ public class DialogueManager : MonoBehaviour
 
         StopAllCoroutines();
         StartCoroutine(TypeSentenceAndInvokeEvent(currentData));
-
         previousData = currentData;
+        currentData.characterSprite.SetActive(true);
+        currentData.DialogueSprite.SetActive(true);
 
     }
 

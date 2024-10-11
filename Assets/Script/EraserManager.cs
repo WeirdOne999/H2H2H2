@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.Events;
+
 public class EraserManager : MonoBehaviour
 {
     public GameObject Player;
@@ -12,6 +14,10 @@ public class EraserManager : MonoBehaviour
     public bool TurnDone = false;
 
     private bool DoneTurnForEnemy = false;
+
+    public UnityEvent Win;
+    public UnityEvent Lose;
+
 
     public void EndTurn()
     {
@@ -45,6 +51,7 @@ public class EraserManager : MonoBehaviour
                         Debug.Log(180 - Mathf.Abs(Player.transform.rotation.eulerAngles.z));
                         Debug.Log(360 - Mathf.Abs(Player.transform.rotation.eulerAngles.z));
                         Debug.Log("Player Win");
+                        Win.Invoke();
                     }
                 }
                 PlayerTurn = !PlayerTurn;
@@ -76,6 +83,7 @@ public class EraserManager : MonoBehaviour
                         Debug.Log(180 - Mathf.Abs(Enemy.transform.rotation.eulerAngles.z));
                         Debug.Log(360 - Mathf.Abs(Enemy.transform.rotation.eulerAngles.z));
                         Debug.Log("Enemy Win");
+                        Lose.Invoke();
                     }
                     
                 }

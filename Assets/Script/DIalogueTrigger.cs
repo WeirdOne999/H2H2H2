@@ -14,19 +14,4 @@ public class DialogueTrigger : MonoBehaviour
         FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
        
     }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            TriggerDialogue();
-            //dialogueSprite.GetComponent<Image>().sprite = transform.GetComponent<SpriteRenderer>().sprite;
-
-            Destroy(this.gameObject.GetComponent<Collider2D>());
-        }
-
-
-
-    }
-
 }

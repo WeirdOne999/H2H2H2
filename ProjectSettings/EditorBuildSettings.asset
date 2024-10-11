@@ -4,5 +4,17 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/SampleScene.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/5Stones.unity
+    guid: 781fabb74813bbc4d8bfa2880180ebc5
+  - enabled: 1
+    path: Assets/Scenes/CountryEraser.unity
+    guid: 0b42f2382e8c218449623e5b713a7493
+  - enabled: 1
+    path: Assets/Scenes/Tops.unity
+    guid: 2582bf13a0119d748aa03dd58b1cb3a0
   m_configObjects: {}

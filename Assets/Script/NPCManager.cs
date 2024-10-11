@@ -29,14 +29,52 @@ public class NPCManager : MonoBehaviour
 
     public List<GameObject> current  =  new List<GameObject>();
 
+    public bool StoryMode = false;
+
+    public int CustomersBefore1 = 1;
+    public int CustomersBefore2 = 1;
+    public int CustomersBefore3 = 1;
+
     private void Start()
     {
-        Spawn();
+    }
+
+    public void StoryModeTrue()
+    {
+        StoryMode = true;
+    }
+
+    public void Customers1(int cust)
+    {
+        CustomersBefore1 = cust;
+    }
+
+    public void Customers2(int cust)
+    {
+        CustomersBefore2 = cust;
+    }
+
+    public void Customers3(int cust)
+    {
+        CustomersBefore3 = cust;
     }
 
     public void Spawn()
     {
-        int temps = Random.Range(0, npcHolder.Count);
+        int temps = Random.Range(0, npcHolder.Count - 3);
+        if (StoryMode)
+        {
+            if (CustomersBefore1 == 0) temps = npcHolder.Count - 3;
+            if (CustomersBefore2 == 0) temps = npcHolder.Count - 2;
+            if (CustomersBefore3 == 0) temps = npcHolder.Count - 1;
+
+            CustomersBefore1--;
+            if (CustomersBefore1 <= 0) CustomersBefore2--;
+            if (CustomersBefore2 <= 0) CustomersBefore3--;
+
+            
+
+        }
         GameObject temp = Instantiate(prefab, start.transform.position, Quaternion.identity);
         temp.GetComponent<NPC>().Back = npcHolder[temps].Back;
         temp.GetComponent<NPC>().Sad = npcHolder[temps].Sad;

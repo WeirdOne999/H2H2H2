@@ -34,11 +34,14 @@ public class ShoppingCartManager : MonoBehaviour
 
     public GameObject SpeechBubble;
 
+    public GameObject Esclamation;
+
     private void Start()
     {
         RT = GetComponent<RectTransform>();
         RT.sizeDelta = new Vector2(0,0);
         SpeechBubble.SetActive(false);
+        Esclamation.SetActive(false);
     }
 
     public void SetCount(float count)
@@ -62,17 +65,9 @@ public class ShoppingCartManager : MonoBehaviour
         {
             NewOrder(Random.Range(1, 6));
         }
-        else if (npcMan.current[0].GetComponent<NPC>().CheckpointNumber == 1)
+        else
         {
-
-        }
-        else if (npcMan.current[0].GetComponent<NPC>().CheckpointNumber == 2)
-        {
-
-        }
-        else if (npcMan.current[0].GetComponent<NPC>().CheckpointNumber == 3)
-        {
-
+            Esclamation.SetActive(true);
         }
     }
 
@@ -123,6 +118,7 @@ public class ShoppingCartManager : MonoBehaviour
                 cart.Clear();
                 npcMan.CurrentCustomerLeave();
                 SpeechBubble.SetActive(false);
+                Esclamation.SetActive(false);
             }
         }
     }

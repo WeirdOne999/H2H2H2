@@ -20,14 +20,14 @@ public struct DialogueData
 {
     public string text;
     public UnityEvent unityEvent;
-    public string name;
-    public Sprite picture;
+    public GameObject characterSprite;
+    public GameObject DialogueSprite;
 
-    public DialogueData(string text, UnityEvent _unityevent, string name, Sprite picture)
+    public DialogueData(string text, UnityEvent _unityevent, GameObject characterSprite, GameObject DialogueSprite)
     {
         this.text = text;
         this.unityEvent = _unityevent;
-        this.name = name;
-        this.picture = picture;
+        this.characterSprite = characterSprite;
+        this.DialogueSprite = DialogueSprite;
     }
 }
