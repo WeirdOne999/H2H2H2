@@ -21,5 +21,6 @@ public class StoneCatch : MonoBehaviour
         temp.SetActive(false);
         AFX.StoneCount++;
         SC.StoneOnFloor--;
+        AFX.CheckForWin();
     }
 }

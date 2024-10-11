@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class ArmFollowX : MonoBehaviour
@@ -15,6 +17,8 @@ public class ArmFollowX : MonoBehaviour
 
     public int StoneCount = 0;
 
+    public TextMeshProUGUI ui;
+
     public float grabTime = 0;
     public bool grabbed = false;
     public int highestScore = 0;
@@ -26,14 +30,27 @@ public class ArmFollowX : MonoBehaviour
 
     public StoneCount SC;
 
+    public UnityEvent ue;
+
 
     private void Start()
     {
         SR = GetComponent<SpriteRenderer>();
     }
 
+    public void CheckForWin()
+    {
+        if (StoneCount >= 5)
+        {
+            this.gameObject.SetActive(false);
+            ue.Invoke();
+        }
+    }
+
     private void Update()
     {
+        
+        ui.text = StoneCount.ToString();
         if (highestScore < StoneCount)
         {
             highestScore = StoneCount;

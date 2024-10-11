@@ -12,7 +12,7 @@ public class TopsSpin : MonoBehaviour
     public float Torque;
     public float force;
     public Vector3 direction;
-    bool spinning = false;
+    public bool spinning = false;
     float tempangvel;
 
     public GameObject spinbutton;
@@ -29,18 +29,20 @@ public class TopsSpin : MonoBehaviour
         // Reset Rigidbody state and variables on scene reload
         rb.velocity = Vector2.zero;
         rb.angularVelocity = 0;
-        spinning = false;
-
+        spinning = true;
+        Debug.Log("TEST: " + spinning);
         StartSpinning();
+        Debug.Log("TEST2: " + spinning);
     }
 
     // Update is called once per frame
     private void Update()
     {
-        Debug.Log(rb.totalTorque);
+        //Debug.Log(rb.totalTorque);
 
         if (rb.angularVelocity < 500)
         {
+            Debug.Log("Lost Spin");
             spinning = false;
         }
     }

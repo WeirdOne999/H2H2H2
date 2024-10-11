@@ -178,3 +178,7 @@ MonoBehaviour:
   TurnDone:
     m_PersistentCalls:
       m_Calls: []
+  source: {fileID: 0}
+  eraserthrown: {fileID: 0}
+  eraserdrop: {fileID: 0}
+  minDropForceSound: 2.5

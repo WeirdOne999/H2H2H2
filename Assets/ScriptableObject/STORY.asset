@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: STORY
   m_EditorClassIdentifier: 
   OnStory: 1
-  StoryCharacter: 2
+  StoryCharacter: 1

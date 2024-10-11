@@ -21,6 +21,7 @@ public class EraserForce : MonoBehaviour
     public AudioSource source;
     public AudioClip eraserthrown;
     public AudioClip eraserdrop;
+    public float minDropForceSound = 1.0f;
     float timer;
     bool allowsound = false;
     bool touched = false;
@@ -90,8 +91,7 @@ public class EraserForce : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        
-            source.PlayOneShot(eraserdrop);
+        if(rb.velocity.magnitude > minDropForceSound) source.PlayOneShot(eraserdrop);
         
        
     }
