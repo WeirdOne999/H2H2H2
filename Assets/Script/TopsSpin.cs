@@ -1,7 +1,5 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Threading;
 using UnityEngine;
 
 public class TopsSpin : MonoBehaviour
@@ -15,6 +13,7 @@ public class TopsSpin : MonoBehaviour
     public float force;
     public Vector3 direction;
     bool spinning = false;
+    float tempangvel;
 
     public GameObject spinbutton;
 
@@ -27,8 +26,12 @@ public class TopsSpin : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
 
+        // Reset Rigidbody state and variables on scene reload
+        rb.velocity = Vector2.zero;
+        rb.angularVelocity = 0;
+        spinning = false;
+
         StartSpinning();
-        
     }
 
     // Update is called once per frame
@@ -36,8 +39,7 @@ public class TopsSpin : MonoBehaviour
     {
         Debug.Log(rb.totalTorque);
 
-
-       if (rb.angularVelocity < 500)
+        if (rb.angularVelocity < 500)
         {
             spinning = false;
         }
@@ -68,16 +70,30 @@ public class TopsSpin : MonoBehaviour
                 direction = Vector2.right;
             }
         }
-       
     }
 
+    public void StopSpinning()
+    {
+        tempangvel = rb.angularVelocity;
+        spinning = false;
+        rb.angularVelocity = 0;
+        rb.velocity = Vector2.zero;
+    }
 
+    public void StartSpinningAgain()
+    {
+        rb.AddTorque(tempangvel);
+        spinning = true;
+    }
 
     public void StartSpinning()
     {
         rb.AddTorque(500f);
         spinning = true;
 
-        source.PlayOneShot(topspinning);
+        if (source != null && topspinning != null)
+        {
+            source.PlayOneShot(topspinning);
+        }
     }
 }
