@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
@@ -33,6 +34,11 @@ public class ShoppingCartManager : MonoBehaviour
     public GameObject currentClick;
 
     public GameObject SpeechBubble;
+    public GameObject SliderGO;
+    public Slider slider;
+
+    public float timerForCustomer;
+    public float timeRemaining;
 
     public GameObject Esclamation;
     public GameObject Esclamation2;
@@ -46,6 +52,7 @@ public class ShoppingCartManager : MonoBehaviour
         Esclamation.SetActive(false);
         Esclamation2.SetActive(false);
         Esclamation3.SetActive(false);
+        SliderGO.SetActive(false);
     }
 
     public void SetCount(float count)
@@ -60,7 +67,7 @@ public class ShoppingCartManager : MonoBehaviour
 
     private void Update()
     {
-        
+        slider.value = timeRemaining / timerForCustomer;
     }
 
     public void OrderRand()
@@ -86,6 +93,9 @@ public class ShoppingCartManager : MonoBehaviour
     public void NewOrder(int orderCount)
     {
         SpeechBubble.SetActive(true);
+        SliderGO.SetActive(true);
+        timerForCustomer = orderCount * 3 + 2;
+        timeRemaining = timerForCustomer;
         foreach (GameObject item in  cart)
         {
             Destroy(item);

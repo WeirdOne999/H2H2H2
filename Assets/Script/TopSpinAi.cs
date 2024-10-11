@@ -36,7 +36,7 @@ public class TopSpinAi : MonoBehaviour
         Debug.Log(rb.totalTorque);
 
         
-        if (spinning == true)
+        if (spinning == true && Time.timeScale != 0)
         {
             randomtime += Time.deltaTime;
             if (randomtime > 5)

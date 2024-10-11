@@ -20,6 +20,8 @@ public class TopsSpin : MonoBehaviour
     public AudioSource source;
     public AudioClip topspinning;
 
+    private float timerCount = 0f;
+
 
     // Start is called before the first frame update
     void Start()
@@ -38,9 +40,10 @@ public class TopsSpin : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        timerCount += Time.deltaTime;
         //Debug.Log(rb.totalTorque);
 
-        if (rb.angularVelocity < 500)
+        if (rb.angularVelocity < 500 && timerCount > 2.0f)
         {
             Debug.Log("Lost Spin");
             spinning = false;

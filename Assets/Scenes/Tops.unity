@@ -651,6 +651,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  player: {fileID: 1543678923}
+  enemy: {fileID: 1956002359}
 --- !u!68 &1178511513
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -1034,6 +1036,7 @@ MonoBehaviour:
   Torque: 1
   force: 10
   direction: {x: 0, y: 0, z: 0}
+  spinning: 0
   spinbutton: {fileID: 0}
   source: {fileID: 2098915913}
   topspinning: {fileID: 8300000, guid: 9e5f6a98b9489a247893cdb0b1e00c2e, type: 3}
@@ -1759,12 +1762,48 @@ PrefabInstance:
       value: Menu
       objectReference: {fileID: 0}
     - target: {fileID: 6725250631426948412, guid: f17e9c04276fd274db93b51d381eae2b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6725250631426948412, guid: f17e9c04276fd274db93b51d381eae2b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6725250631426948412, guid: f17e9c04276fd274db93b51d381eae2b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1178511512}
+    - target: {fileID: 6725250631426948412, guid: f17e9c04276fd274db93b51d381eae2b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 2098915915}
     - target: {fileID: 6725250631426948412, guid: f17e9c04276fd274db93b51d381eae2b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6725250631426948412, guid: f17e9c04276fd274db93b51d381eae2b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: DisableBoth
+      objectReference: {fileID: 0}
+    - target: {fileID: 6725250631426948412, guid: f17e9c04276fd274db93b51d381eae2b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
       value: TriggerDialogue
+      objectReference: {fileID: 0}
+    - target: {fileID: 6725250631426948412, guid: f17e9c04276fd274db93b51d381eae2b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: GameEndScript, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6725250631426948412, guid: f17e9c04276fd274db93b51d381eae2b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: DialogueTrigger, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6725250631426948412, guid: f17e9c04276fd274db93b51d381eae2b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6725250631426948412, guid: f17e9c04276fd274db93b51d381eae2b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8336577202210097857, guid: f17e9c04276fd274db93b51d381eae2b, type: 3}
       propertyPath: m_Pivot.x
@@ -2424,7 +2463,7 @@ MonoBehaviour:
   nameText: {fileID: 0}
   dialogueText: {fileID: 1973947455}
   dialogueSprite: {fileID: 0}
-  textSpeed: 0.1
+  textSpeed: 0.01
   DialogueIsRunning: 0
   unityEvent:
     m_PersistentCalls:
