@@ -35,6 +35,8 @@ public class ShoppingCartManager : MonoBehaviour
     public GameObject SpeechBubble;
 
     public GameObject Esclamation;
+    public GameObject Esclamation2;
+    public GameObject Esclamation3;
 
     private void Start()
     {
@@ -42,6 +44,8 @@ public class ShoppingCartManager : MonoBehaviour
         RT.sizeDelta = new Vector2(0,0);
         SpeechBubble.SetActive(false);
         Esclamation.SetActive(false);
+        Esclamation2.SetActive(false);
+        Esclamation3.SetActive(false);
     }
 
     public void SetCount(float count)
@@ -65,9 +69,17 @@ public class ShoppingCartManager : MonoBehaviour
         {
             NewOrder(Random.Range(1, 6));
         }
-        else
+        else if(npcMan.current[0].GetComponent<NPC>().CheckpointNumber == 1)
         {
             Esclamation.SetActive(true);
+        }
+        else if (npcMan.current[0].GetComponent<NPC>().CheckpointNumber == 2)
+        {
+            Esclamation2.SetActive(true);
+        }
+        else if (npcMan.current[0].GetComponent<NPC>().CheckpointNumber == 3)
+        {
+            Esclamation3.SetActive(true);
         }
     }
 

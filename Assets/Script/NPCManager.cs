@@ -35,6 +35,8 @@ public class NPCManager : MonoBehaviour
     public int CustomersBefore2 = 1;
     public int CustomersBefore3 = 1;
 
+    public StorySave SS;
+
     private void Start()
     {
     }
@@ -64,15 +66,16 @@ public class NPCManager : MonoBehaviour
         int temps = Random.Range(0, npcHolder.Count - 3);
         if (StoryMode)
         {
-            if (CustomersBefore1 == 0) temps = npcHolder.Count - 3;
-            if (CustomersBefore2 == 0) temps = npcHolder.Count - 2;
-            if (CustomersBefore3 == 0) temps = npcHolder.Count - 1;
+            
 
-            CustomersBefore1--;
+            if (CustomersBefore1 == 0 && SS.StoryCharacter == 0) temps = npcHolder.Count - 3;
+            if (CustomersBefore2 == 0 && SS.StoryCharacter == 1) temps = npcHolder.Count - 2;
+            if (CustomersBefore3 == 0 && SS.StoryCharacter == 2) temps = npcHolder.Count - 1;
+
+            if (CustomersBefore1 != 0) CustomersBefore1--;
             if (CustomersBefore1 <= 0) CustomersBefore2--;
             if (CustomersBefore2 <= 0) CustomersBefore3--;
 
-            
 
         }
         GameObject temp = Instantiate(prefab, start.transform.position, Quaternion.identity);
