@@ -28,7 +28,7 @@ public class CounterMovement : MonoBehaviour
     private SpriteRenderer SR;
 
     public AudioSource source;
-    public AudioClip clip;
+    public AudioClip walk;
 
     public List<GameObject> itemHolder  = new List<GameObject>();
     void Start()
@@ -63,6 +63,8 @@ public class CounterMovement : MonoBehaviour
     {
         if (startSin) sinTimer += Time.deltaTime;
         MainCharacter.transform.position = Vector3.MoveTowards(MainCharacter.transform.position, temp, speed);
+     
+        
         float tempFloat = (MainCharacter.transform.position.x - temp.x);
         if (tempFloat != 0 && GOTSINE)
         {

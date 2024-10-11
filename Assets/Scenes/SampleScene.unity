@@ -1583,8 +1583,8 @@ MonoBehaviour:
   freqOfSin: 0
   Lborder: {fileID: 1263680942}
   Rborder: {fileID: 517320760}
-  source: {fileID: 0}
-  clip: {fileID: 0}
+  source: {fileID: 1006780619}
+  walk: {fileID: 8300000, guid: 1a2529c13e31cba43bba5621021a9efe, type: 3}
   itemHolder:
   - {fileID: 1661790135}
   - {fileID: 1516398359}

@@ -24,6 +24,9 @@ public class NPC : MonoBehaviour
 
     public SpriteRenderer SR;
 
+    public AudioSource source;
+    public AudioClip walk;
+
     private void Start()
     {
         SR = GetComponent<SpriteRenderer>();
@@ -33,6 +36,19 @@ public class NPC : MonoBehaviour
     {
         if (startSin) sinTimer += Time.deltaTime;
         transform.position = Vector3.MoveTowards(transform.position, temp, speed);
+        if (!(temp == transform.position))
+        {
+            if (!source.isPlaying)
+            {
+
+                source.PlayOneShot(walk);
+            }
+
+
+        }else
+        {
+            source.Stop();
+        }
 
         float tempFloat = (transform.position.x - temp.x);
         if (tempFloat != 0 && GOTSINE)
