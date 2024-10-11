@@ -28,8 +28,19 @@ public class StarSystem : MonoBehaviour
 
     public void AddRating(float stars)
     {
-        StarsList.Add(stars);
-        CalculateNewStars();
+        Stars += stars;
+        if (Stars >= 5)
+        {
+            Stars = 5;
+        }
+        if (Stars <= 0)
+        {
+            foreach (UnityEvent ue in loseEvents)
+            {
+                ue.Invoke();
+            }
+        }
+        
     }
 
     public void CalculateNewStars()
@@ -42,12 +53,6 @@ public class StarSystem : MonoBehaviour
 
         Stars = temp / StarsList.Count;
 
-        if (Stars <= 1)
-        {
-            foreach(UnityEvent ue in loseEvents)
-            {
-                ue.Invoke();
-            }
-        }
+       
     }
 }

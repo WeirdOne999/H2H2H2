@@ -1413,6 +1413,18 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 773026866}
         m_TargetAssemblyTypeName: NPCManager, Assembly-CSharp
+        m_MethodName: StartQTrue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 773026866}
+        m_TargetAssemblyTypeName: NPCManager, Assembly-CSharp
         m_MethodName: Spawn
         m_Mode: 1
         m_Arguments:
@@ -5375,53 +5387,53 @@ MonoBehaviour:
   - name: Aqil
     Happy: {fileID: 21300000, guid: 12e427ec581b19544ac9695cc40da37a, type: 3}
     Sad: {fileID: 21300000, guid: 8b1a08d3eb4a20641a4508cdc2d29849, type: 3}
-    Back: {fileID: 21300000, guid: ad3eb559205cf714d9dc3e135342809d, type: 3}
+    Back: {fileID: 21300000, guid: f4cf9033d97bffd41a5584cd250266d4, type: 3}
     CheckPoint: 0
   - name: Jerrick
     Happy: {fileID: 21300000, guid: 8d1d6a1699df2ee4da404ed91fa4ca63, type: 3}
     Sad: {fileID: 21300000, guid: 68789c07037e2e44489bb4ccc3cf6893, type: 3}
-    Back: {fileID: 21300000, guid: 23e2f289e10e1c144a9153860565f48b, type: 3}
+    Back: {fileID: 21300000, guid: 72b3d32d45c375a4d974f7fa0aff078e, type: 3}
     CheckPoint: 0
   - name: Little Boy
     Happy: {fileID: 21300000, guid: cc08e30d8de617c4b964ad9c491701e4, type: 3}
     Sad: {fileID: 21300000, guid: 84d2ea992c726fb48bc2c0679652ca13, type: 3}
-    Back: {fileID: 21300000, guid: 68f90f06beb0c9049be7eb63b03db84b, type: 3}
+    Back: {fileID: 21300000, guid: 5564428ad63f733418641566dc72d351, type: 3}
     CheckPoint: 0
   - name: Little Girl
     Happy: {fileID: 21300000, guid: 0861f2d3c37966343a1a3aca1f784992, type: 3}
     Sad: {fileID: 21300000, guid: 42bb3a334618bf8469fd71769d166aaf, type: 3}
-    Back: {fileID: 21300000, guid: 9012d9c525131b4438ed230ccb169557, type: 3}
+    Back: {fileID: 21300000, guid: b22101bc65845c640b5d27779fa1872f, type: 3}
     CheckPoint: 0
   - name: Middled Aged Malay Woman
     Happy: {fileID: 21300000, guid: 7765a9042b4baf54089a1e7977926214, type: 3}
     Sad: {fileID: 21300000, guid: 70bef4529a1f43a48af2c4b8a5105d48, type: 3}
-    Back: {fileID: 21300000, guid: cd501c9064654d8438695ed6cda625a0, type: 3}
+    Back: {fileID: 21300000, guid: 2d07a243208099a4798e093e7be71e61, type: 3}
     CheckPoint: 0
   - name: Middled Aged Chinese Man
     Happy: {fileID: 21300000, guid: d654b877abdd90a499949b8c80a47286, type: 3}
     Sad: {fileID: 21300000, guid: 8b505330a03c8c444a72e4545cfbe67c, type: 3}
-    Back: {fileID: 21300000, guid: 766c8de6df61f86428c8f78a1d1770e9, type: 3}
+    Back: {fileID: 21300000, guid: ac5bb5d5045865e45899a6244072050d, type: 3}
     CheckPoint: 0
   - name: Old Indian Woman
     Happy: {fileID: 21300000, guid: c68358d567e75ce409648903dc47cf13, type: 3}
     Sad: {fileID: 21300000, guid: e9e8bf0bd2f0d284e90ef8875438d2db, type: 3}
-    Back: {fileID: 21300000, guid: 809734a1a2c3fc64a8b62f591ae165b9, type: 3}
+    Back: {fileID: 21300000, guid: ed24007bf13d974488d6909b69cb99c9, type: 3}
     CheckPoint: 0
   - name: Shelby
     Happy: {fileID: 21300000, guid: 65924c284881b7e4888973927fca930c, type: 3}
     Sad: {fileID: 21300000, guid: 3ee56ff7188731c49a52bfec6c0454c8, type: 3}
-    Back: {fileID: 21300000, guid: cf1d783866c551c4591192686132522c, type: 3}
+    Back: {fileID: 21300000, guid: 24dd83e1eef406f4fb1c93daccc5c1c3, type: 3}
     CheckPoint: 0
   - name: Shi Ying
     Happy: {fileID: 21300000, guid: 4b2cf422e92a0094d86c08a7b87fc817, type: 3}
     Sad: {fileID: 21300000, guid: 3734df8ba0937924e8f28eef0ce8aea3, type: 3}
-    Back: {fileID: 21300000, guid: ae9acb1b37669994cbfd825ae7379690, type: 3}
+    Back: {fileID: 21300000, guid: 94a1bbfb4735f844fadca08e95b9f3b8, type: 3}
     CheckPoint: 0
   - name: Courtney
     Happy: {fileID: 21300000, guid: 78ebd0dffc4ae6b42a1847eed4c468b1, type: 3}
     Sad: {fileID: 21300000, guid: 670aa847c657484459f66603483c62c1, type: 3}
     Back: {fileID: 21300000, guid: 88b49dc0d1e6b584289cf62d472b20dd, type: 3}
-    CheckPoint: 3
+    CheckPoint: 0
   - name: small little girl
     Happy: {fileID: 21300000, guid: 14d3c48e91bbe1b49aac5ca230772a77, type: 3}
     Sad: {fileID: 21300000, guid: 14d3c48e91bbe1b49aac5ca230772a77, type: 3}
@@ -5447,6 +5459,15 @@ MonoBehaviour:
   CustomersBefore2: 2
   CustomersBefore3: 2
   SS: {fileID: 11400000, guid: a9ef1be6589c6de478a4958d0f94c37c, type: 2}
+  gainPerCustomer: 0.3
+  losePerCustomer: -1
+  win:
+    m_PersistentCalls:
+      m_Calls: []
+  lose:
+    m_PersistentCalls:
+      m_Calls: []
+  StartQ: 0
 --- !u!4 &773026867
 Transform:
   m_ObjectHideFlags: 0
@@ -7722,6 +7743,18 @@ MonoBehaviour:
   loseEvents:
   - m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 773026866}
+        m_TargetAssemblyTypeName: NPCManager, Assembly-CSharp
+        m_MethodName: StartQFalse
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: ShutterClose
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1237271915}
         m_TargetAssemblyTypeName: PlayAnimation, Assembly-CSharp
         m_MethodName: PlayAnim
@@ -7732,6 +7765,42 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: ShutterClose
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 907059700}
+        m_TargetAssemblyTypeName: PlayAnimation, Assembly-CSharp
+        m_MethodName: PlayAnim
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: StockHide
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1645656446}
+        m_TargetAssemblyTypeName: PlayAnimation, Assembly-CSharp
+        m_MethodName: PlayAnim
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: StarHide
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 292911120}
+        m_TargetAssemblyTypeName: PlayAnimation, Assembly-CSharp
+        m_MethodName: PlayAnim
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: HomeStay
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1006780615
@@ -8099,9 +8168,15 @@ MonoBehaviour:
   npcMan: {fileID: 773026866}
   currentClick: {fileID: 0}
   SpeechBubble: {fileID: 1859938990}
+  SliderGO: {fileID: 1886696665}
+  slider: {fileID: 1886696667}
+  timerForCustomer: 0
+  timeRemaining: 0
   Esclamation: {fileID: 904657669}
   Esclamation2: {fileID: 395150562}
   Esclamation3: {fileID: 128535165}
+  foreachitem: 1
+  extratime: 0.5
 --- !u!114 &1031383424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14073,6 +14148,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: StarShow
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 773026866}
+        m_TargetAssemblyTypeName: NPCManager, Assembly-CSharp
+        m_MethodName: StartQTrue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 773026866}

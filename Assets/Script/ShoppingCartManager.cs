@@ -44,6 +44,9 @@ public class ShoppingCartManager : MonoBehaviour
     public GameObject Esclamation2;
     public GameObject Esclamation3;
 
+    public float foreachitem;
+    public float extratime;
+
     private void Start()
     {
         RT = GetComponent<RectTransform>();
@@ -67,7 +70,29 @@ public class ShoppingCartManager : MonoBehaviour
 
     private void Update()
     {
-        slider.value = timeRemaining / timerForCustomer;
+        if (timeRemaining >= 0)
+        {
+            timeRemaining -= Time.deltaTime;
+            slider.value = timeRemaining / timerForCustomer;
+
+            if (timeRemaining <= 0 && cart.Count != 0)
+            {
+                //End Customer
+                foreach (GameObject item in cart)
+                {
+                    Destroy(item);
+                }
+                RT.sizeDelta = new Vector2(0, 0);
+                count = 0;
+                cart.Clear();
+                npcMan.IsCustomerHappy(false);
+                SliderGO.SetActive(false);
+                SpeechBubble.SetActive(false);
+                Esclamation.SetActive(false);
+                Esclamation2.SetActive(false);
+                Esclamation3.SetActive(false);
+            }
+        }
     }
 
     public void OrderRand()
@@ -94,7 +119,7 @@ public class ShoppingCartManager : MonoBehaviour
     {
         SpeechBubble.SetActive(true);
         SliderGO.SetActive(true);
-        timerForCustomer = orderCount * 3 + 2;
+        timerForCustomer = orderCount * foreachitem + extratime;
         timeRemaining = timerForCustomer;
         foreach (GameObject item in  cart)
         {
@@ -138,9 +163,12 @@ public class ShoppingCartManager : MonoBehaviour
                 RT.sizeDelta = new Vector2(0, 0);
                 count = 0;
                 cart.Clear();
-                npcMan.CurrentCustomerLeave();
+                npcMan.IsCustomerHappy(true);
+                SliderGO.SetActive(false);
                 SpeechBubble.SetActive(false);
                 Esclamation.SetActive(false);
+                Esclamation2.SetActive(false);
+                Esclamation3.SetActive(false);
             }
         }
     }

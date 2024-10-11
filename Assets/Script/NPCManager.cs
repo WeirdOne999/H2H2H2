@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 using Random = UnityEngine.Random;
 
 public class NPCManager : MonoBehaviour
@@ -37,8 +38,26 @@ public class NPCManager : MonoBehaviour
 
     public StorySave SS;
 
+    public float gainPerCustomer = 0.3f;
+    public float losePerCustomer = -1f;
+
+    public UnityEvent win;
+    public UnityEvent lose;
+
+    public bool StartQ = false;
+
     private void Start()
     {
+    }
+
+    public void StartQTrue()
+    {
+        StartQ = true;
+    }
+
+    public void StartQFalse()
+    {
+        StartQ = false;
     }
 
     public void StoryModeTrue()
@@ -63,6 +82,7 @@ public class NPCManager : MonoBehaviour
 
     public void Spawn()
     {
+        if (!StartQ) return;
         int temps = Random.Range(0, npcHolder.Count - 3);
         if (StoryMode)
         {
@@ -95,6 +115,27 @@ public class NPCManager : MonoBehaviour
 
         current[0].GetComponent<NPC>().StartMovement(leave.transform.position.x);
         current[0].GetComponent<NPC>().HappySprite();
+        current.Remove(current[0]);
+        Spawn();
+    }
+
+    public void IsCustomerHappy(bool isHappy)
+    {
+        if (isHappy)
+        {
+            GameObject.Find("Main Camera").GetComponent<StarSystem>().AddRating(gainPerCustomer);
+            current[0].GetComponent<NPC>().HappySprite();
+            win.Invoke();
+        }
+        else
+        {
+            GameObject.Find("Main Camera").GetComponent<StarSystem>().AddRating(losePerCustomer);
+            current[0].GetComponent<NPC>().SadSprite();
+            lose.Invoke();
+
+        }
+
+        current[0].GetComponent<NPC>().StartMovement(leave.transform.position.x);
         current.Remove(current[0]);
         Spawn();
     }
