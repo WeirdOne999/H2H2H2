@@ -8,15 +8,17 @@ public class TopSpinAi : MonoBehaviour
     private Rigidbody2D rb;
     public float force;
     public GameObject player;
-    bool spinning = false;
+    public bool spinning = false;
     public GameObject centre;
-    float angle;
+    public float angle;
     public float moveSpeed;
     public float radius;
-    float randomtime;
-    bool atpoint = false;
-    float tempangvel;
-    bool pause;
+    public float randomtime;
+    public bool atpoint = false;
+    public float tempangvel;
+    public bool pause;
+
+    private float timerCount = 0f;
 
     // Start is called before the first frame update
     void Start()
@@ -26,10 +28,17 @@ public class TopSpinAi : MonoBehaviour
         
     }
 
+    public void SpinAgain()
+    {
+        rb = GetComponent<Rigidbody2D>();
+        StartSpinning();
+    }
+
     // Update is called once per frame
     private void Update()
     {
-        if (rb.angularVelocity < 500)
+        timerCount += Time.deltaTime;
+        if (rb.angularVelocity < 500 && timerCount > 2.0f)
         {
             spinning = false;
         }
