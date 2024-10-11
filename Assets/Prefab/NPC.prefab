@@ -125,7 +125,7 @@ MonoBehaviour:
   Sad: {fileID: 0}
   SR: {fileID: 0}
   source: {fileID: 4688305218717065136}
-  walk: {fileID: 8300000, guid: 1a2529c13e31cba43bba5621021a9efe, type: 3}
+  walk: {fileID: 8300000, guid: eaf1620fd22983d49a4079bd04fd00ca, type: 3}
 --- !u!61 &4183414846089623370
 BoxCollider2D:
   m_ObjectHideFlags: 0
