@@ -198,7 +198,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2f93e6eaba68b374688ea51ad002919e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5828a57903611124eb12a31cd8944729, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -350,7 +350,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: cfae0959f399e3742aaaf61cf488a466, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 74c67c1db97441d49b934e5f96aa5ba4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -518,6 +518,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 6221072592058211648}
+        m_TargetAssemblyTypeName: SceneSaver, Assembly-CSharp
+        m_MethodName: SaveSceneInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 6200163810148796043}
         m_TargetAssemblyTypeName: MenuLogic, Assembly-CSharp
         m_MethodName: reload
@@ -690,6 +702,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8336577202210097857}
   - component: {fileID: 6200163810148796043}
+  - component: {fileID: 6221072592058211648}
   m_Layer: 5
   m_Name: Menu
   m_TagString: Untagged
@@ -738,6 +751,19 @@ MonoBehaviour:
   WinStuff:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &6221072592058211648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6037974745809597066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8fcf431811cd9547bcab78d5c9ba9f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SceneInfo: {fileID: 11400000, guid: e6f90f6ed3b60614699c24b7ff36063b, type: 2}
 --- !u!1 &6136581948294549730
 GameObject:
   m_ObjectHideFlags: 0
@@ -1324,6 +1350,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 6221072592058211648}
+        m_TargetAssemblyTypeName: SceneSaver, Assembly-CSharp
+        m_MethodName: SaveSceneInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 6200163810148796043}
         m_TargetAssemblyTypeName: MenuLogic, Assembly-CSharp
         m_MethodName: reload

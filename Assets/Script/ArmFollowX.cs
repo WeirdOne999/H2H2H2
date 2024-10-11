@@ -83,6 +83,7 @@ public class ArmFollowX : MonoBehaviour
                     Stones[0].transform.position = this.transform.position + new Vector3(0,1,0);
 
                     Stones[0].GetComponent<Rigidbody2D>().AddForce(Vector2.up * throwMultiplier);
+                    Stones[0].GetComponent<Rigidbody2D>().AddForce(Vector2.right * Random.Range(-1, 2) * Random.Range(30, 50));
                     StoneCount--;
                     Stones.Remove(Stones[0]);
                     if (Stones.Count == 0)

@@ -45,7 +45,7 @@ public class CounterMovement : MonoBehaviour
         {
             for (int i = 0; i < itemHolder[j].transform.childCount; i++)
             {
-                Debug.Log("Child: " + i);
+                //Debug.Log("Child: " + i);
                 if (itemHolder[j].transform.GetChild(i).CompareTag("Item")) listOfInteractables.Add(itemHolder[j].transform.GetChild(i).gameObject);
             }
         }

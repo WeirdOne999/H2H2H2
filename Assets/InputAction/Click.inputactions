@@ -6,6 +6,15 @@
             "id": "2e056e4b-9151-4b09-8762-6821bd413163",
             "actions": [
                 {
+                    "name": "Position",
+                    "type": "Value",
+                    "id": "6e05607d-bd6f-4aae-9d3b-133036270442",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
                     "name": "Click",
                     "type": "Button",
                     "id": "1ab0fde3-4495-4e6b-98d6-f9bda3a0f572",
@@ -35,6 +44,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "Click",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "76858c05-db12-4e48-87e1-29f56852efd2",
+                    "path": "<Mouse>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Position",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7587e735-27c5-4102-bbea-9750d6e9779f",
+                    "path": "<Touchscreen>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Position",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
