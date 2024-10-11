@@ -508,6 +508,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74434a69d60075e48bd33fc55ff643ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  WinEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  LoseEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!68 &1178511513
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -855,7 +861,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1543678923}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -1574,7 +1580,7 @@ AudioSource:
   m_GameObject: {fileID: 2098915909}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -3559963415145677038, guid: e3834f821dd914441b273c1f56643584, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -1670,7 +1676,7 @@ AudioSource:
   m_GameObject: {fileID: 2098915909}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -8351052360376078562, guid: e3834f821dd914441b273c1f56643584, type: 2}
   m_audioClip: {fileID: 8300000, guid: a93f0114559a5d4468faea909187e486, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1

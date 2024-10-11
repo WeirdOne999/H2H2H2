@@ -18,7 +18,7 @@ public class EraserManager : MonoBehaviour
     public UnityEvent Win;
     public UnityEvent Lose;
 
-
+   
     public void EndTurn()
     {
         TurnDone = true;
@@ -92,4 +92,6 @@ public class EraserManager : MonoBehaviour
             }
         }
     }
+
+ 
 }

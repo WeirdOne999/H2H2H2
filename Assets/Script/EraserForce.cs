@@ -18,6 +18,13 @@ public class EraserForce : MonoBehaviour
 
     private float Timer = 0f;
 
+    public AudioSource source;
+    public AudioClip eraserthrown;
+    public AudioClip eraserdrop;
+    float timer;
+    bool allowsound = false;
+    bool touched = false;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -25,7 +32,7 @@ public class EraserForce : MonoBehaviour
 
     private void Update()
     {
-        
+      
         if (OnTurn)
         {
             Timer += Time.deltaTime;
@@ -40,6 +47,8 @@ public class EraserForce : MonoBehaviour
 
     public void FlickEraer(Vector3 v2)
     {
+
+        source.PlayOneShot(eraserthrown);
         Timer = 0f;
         OnTurn = true;
         rb.AddForce(((this.transform.position - v2)) * flickPower);
@@ -59,6 +68,7 @@ public class EraserForce : MonoBehaviour
 
     public void InverseFlickEraer(Vector3 v2)
     {
+        source.PlayOneShot(eraserthrown);
         Timer = 0f; 
         OnTurn = true;
         rb.AddForce((-(this.transform.position - v2)) * flickPower);
@@ -76,5 +86,13 @@ public class EraserForce : MonoBehaviour
             temp = 1f;
         }
         rb.AddTorque(temp * torque);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        
+            source.PlayOneShot(eraserdrop);
+        
+       
     }
 }
