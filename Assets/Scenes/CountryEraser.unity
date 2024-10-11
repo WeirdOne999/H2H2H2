@@ -1322,6 +1322,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8336577202210097857, guid: f17e9c04276fd274db93b51d381eae2b, type: 3}
   m_PrefabInstance: {fileID: 1151289149}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1484264558 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6200163810148796043, guid: f17e9c04276fd274db93b51d381eae2b, type: 3}
+  m_PrefabInstance: {fileID: 1151289149}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49777e487bbb7414bbb8d07f5b82430d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1539495194 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6235878381692838723, guid: f06678fbcbba8a24aadbafd7bbe70b50, type: 3}
@@ -1444,7 +1455,7 @@ MonoBehaviour:
   Win:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1484264558}
         m_TargetAssemblyTypeName: MenuLogic, Assembly-CSharp
         m_MethodName: ShowWin
         m_Mode: 1
@@ -1459,7 +1470,7 @@ MonoBehaviour:
   Lose:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1484264558}
         m_TargetAssemblyTypeName: MenuLogic, Assembly-CSharp
         m_MethodName: ShowLose
         m_Mode: 1
