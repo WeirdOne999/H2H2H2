@@ -7,7 +7,7 @@ public class ChallengeCardLogic : MonoBehaviour
 {
     public SceneInfo SceneInfo;
 
-    private void Start()
+    private void Awake()
     {
         if (SceneInfo.PrevScene == SceneManager.GetActiveScene().name)
         {

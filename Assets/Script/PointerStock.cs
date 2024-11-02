@@ -16,7 +16,7 @@ public class PointerStock : MonoBehaviour
 
     public List<GameObject> StockCollider = new List<GameObject>();
 
-    private void Start()
+    private void Awake()
     {
         sprite = this.GetComponent<SpriteRenderer>();
         sprite.enabled = false;

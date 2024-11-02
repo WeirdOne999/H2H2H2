@@ -16,7 +16,7 @@ public class PlayerEraserController : MonoBehaviour
     public bool oneClick = false;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         MO = GetComponent<MouseOver>();
         EF = GetComponent<EraserForce>();

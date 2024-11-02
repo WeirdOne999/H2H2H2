@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class BGMscript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private static GameObject instance = null;
+    private void Awake()
     {
-        DontDestroyOnLoad(this.gameObject);
-    }
-
-    // Update is called once per fr
-    void Update()
-    {
-        
+        if (instance == null){
+            instance = this.gameObject;
+            DontDestroyOnLoad(this.gameObject);
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
     }
 }

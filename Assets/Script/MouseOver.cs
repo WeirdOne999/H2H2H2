@@ -5,7 +5,7 @@ using UnityEngine;
 public class MouseOver : MonoBehaviour
 {
     public bool IsMouseOver;
-    void Start()
+    void Awake()
     {
         IsMouseOver = false;
     }

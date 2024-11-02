@@ -7,7 +7,7 @@ using static Unity.Collections.AllocatorManager;
 public class StockAdd : MonoBehaviour
 {
     private PointerStock PS;
-    private void Start()
+    private void Awake()
     {
         PS = GameObject.Find("PointerStock").GetComponent<PointerStock>();
     }

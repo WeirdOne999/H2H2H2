@@ -10,7 +10,7 @@ public class ItemClick : MonoBehaviour
     private ShoppingCartManager SCM;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         MO = GetComponent<MouseOver>();
         SCM = GameObject.Find("Cart Item").GetComponent<ShoppingCartManager>();

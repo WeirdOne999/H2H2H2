@@ -12,7 +12,7 @@ public class MenuLogic : MonoBehaviour
 
     public UnityEvent WinStuff;
 
-    private void Start()
+    private void Awake()
     {
         Menu.SetActive(false);
         LoseScreen.SetActive(false);

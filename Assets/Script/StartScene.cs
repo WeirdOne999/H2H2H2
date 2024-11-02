@@ -9,7 +9,7 @@ public class StartScene : MonoBehaviour
     public NPCManager NPCM;
     public UnityEvent UE;
 
-    void Start()
+    void Awake()
     {
         if (SS.OnStory)
         {

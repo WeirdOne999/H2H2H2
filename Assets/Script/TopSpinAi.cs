@@ -21,7 +21,7 @@ public class TopSpinAi : MonoBehaviour
     private float timerCount = 0f;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         StartSpinning();  

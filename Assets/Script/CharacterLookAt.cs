@@ -5,7 +5,7 @@ using UnityEngine;
 public class CharacterLookAt : MonoBehaviour
 {
     private float scaleX;
-    private void Start()
+    private void Awake()
     {
         scaleX = transform.localScale.x;
     }

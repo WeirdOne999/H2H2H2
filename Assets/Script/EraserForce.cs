@@ -26,7 +26,7 @@ public class EraserForce : MonoBehaviour
     bool allowsound = false;
     bool touched = false;
 
-    private void Start()
+    private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
     }

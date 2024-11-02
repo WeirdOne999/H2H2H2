@@ -46,7 +46,7 @@ public class NPCManager : MonoBehaviour
 
     public bool StartQ = false;
 
-    private void Start()
+    private void Awake()
     {
     }
 

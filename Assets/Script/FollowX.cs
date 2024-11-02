@@ -10,7 +10,7 @@ public class FollowX : MonoBehaviour
 
     public float speed = 1.0f;
 
-    void Start()
+    void Awake()
     {
         Starty = this.transform.position.y;
     }

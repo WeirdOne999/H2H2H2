@@ -20,7 +20,7 @@ public class StarSystem : MonoBehaviour
     {
         Stars = 5.0f;
     }
-    void Start()
+    void Awake()
     {
         widthStart = RT.sizeDelta.x;
     }

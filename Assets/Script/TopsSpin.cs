@@ -23,11 +23,12 @@ public class TopsSpin : MonoBehaviour
     private float timerCount = 0f;
 
     public JoyStickLogic JSL;
+    public float MaxVel = 5.0f;
 
 
     // Start is called before the first frame update
 
-    private void Start()
+    private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         // Reset Rigidbody state and variables on scene reload
@@ -91,8 +92,15 @@ public class TopsSpin : MonoBehaviour
         }*/
 
        
+        if (JSL.diff.magnitude != 0)
+        {
+            rb.AddForce(-JSL.diff.normalized * force);
 
-        rb.AddForce(-JSL.diff.normalized * force);
+            if (rb.velocity.magnitude <= MaxVel)
+            {
+                rb.velocity = rb.velocity.normalized * MaxVel;
+            }
+        }
     }
 
     public void StopSpinning()

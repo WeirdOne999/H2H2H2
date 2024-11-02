@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayAnimation : MonoBehaviour
 {
-
+    public bool gotSound = true;
     public AudioSource source;
     public AudioClip clip;
 
@@ -12,6 +12,6 @@ public class PlayAnimation : MonoBehaviour
     public void PlayAnim(string name)
     {
         GetComponent<Animator>().Play(name);
-        source.PlayOneShot(clip);
+        if (gotSound) source.PlayOneShot(clip);
     }
 }

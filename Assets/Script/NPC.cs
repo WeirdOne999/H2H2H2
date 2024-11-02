@@ -2,7 +2,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEditor.PlayerSettings;
 
 public class NPC : MonoBehaviour
 {
@@ -12,9 +11,9 @@ public class NPC : MonoBehaviour
     public float heightAlteration = 0f;
     public bool GOTSINE = true;
     public float freqOfSin = 0;
-    public bool startSin = false;
+    public bool StartSin = false;
     private float sinTimer = 0f;
-    private float startY;
+    private float StartY;
 
     public int CheckpointNumber;
 
@@ -27,14 +26,14 @@ public class NPC : MonoBehaviour
     public AudioSource source;
     public AudioClip walk;
 
-    private void Start()
+    private void Awake()
     {
         SR = GetComponent<SpriteRenderer>();
     }
 
     private void FixedUpdate()
     {
-        if (startSin) sinTimer += Time.deltaTime;
+        if (StartSin) sinTimer += Time.deltaTime;
         transform.position = Vector3.MoveTowards(transform.position, temp, speed);
         if (!(temp == transform.position))
         {
@@ -61,8 +60,8 @@ public class NPC : MonoBehaviour
         }
         if (Mathf.Abs(tempFloat) < 0.5f)
         {
-            startSin = false;
-            temp.y = startY;
+            StartSin = false;
+            temp.y = StartY;
         }
     }
 
@@ -70,9 +69,9 @@ public class NPC : MonoBehaviour
     {
         temp.y = transform.position.y;
         temp.x = x;
-        startY = transform.position.y;
+        StartY = transform.position.y;
         freqOfSin = (transform.position.x - temp.x);
-        startSin = true;
+        StartSin = true;
         sinTimer = 0f;
     }
 

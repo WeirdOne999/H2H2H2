@@ -11,7 +11,7 @@ public class TopsChallengeCardController : MonoBehaviour
 
     public float temp;
 
-    private void Start()
+    private void Awake()
     {
     }
 

@@ -36,7 +36,7 @@ public class ArmFollowX : MonoBehaviour
     public AudioClip throwbag;
    
 
-    private void Start()
+    private void Awake()
     {
         SR = GetComponent<SpriteRenderer>();
     }

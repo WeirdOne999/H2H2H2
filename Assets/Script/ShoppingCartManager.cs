@@ -55,7 +55,12 @@ public class ShoppingCartManager : MonoBehaviour
 
     public UnityEvent happyHan;
     public UnityEvent AngryHan;
-    private void Start()
+
+    public GameObject clickParticle;
+    public GameObject starParticle;
+    public GameObject angryParticle;
+    public GameObject hanRef;
+    private void Awake()
     {
         RT = GetComponent<RectTransform>();
         RT.sizeDelta = new Vector2(0,0);
@@ -85,6 +90,7 @@ public class ShoppingCartManager : MonoBehaviour
 
             if (timeRemaining <= 0 && cart.Count != 0)
             {
+                Instantiate(angryParticle,hanRef.transform.position, Quaternion.identity);
                 //End Customer
                 AngryHan.Invoke();
                 foreach (GameObject item in cart)
@@ -162,14 +168,14 @@ public class ShoppingCartManager : MonoBehaviour
             {
                 cart[currentPosition].transform.GetChild(i).gameObject.SetActive(true);
             }
-
+            Instantiate(clickParticle, currentClick.transform.position, Quaternion.identity);
             currentClick.SetActive(false);
 
             currentPosition++;
 
             if (currentPosition == count)
             {
-
+                Instantiate(starParticle, hanRef.transform.position, Quaternion.identity);
                 source.PlayOneShot(kaching);
                 //End Customer
                 foreach (GameObject item in cart)
@@ -187,6 +193,8 @@ public class ShoppingCartManager : MonoBehaviour
                 Esclamation3.SetActive(false);
                 happyHan.Invoke();
             }
+
         }
+
     }
 }

@@ -16,9 +16,9 @@ public class CounterMovement : MonoBehaviour
     public float heightAlteration = 0f;
     public bool GOTSINE = true;
     public float freqOfSin = 0;
-    private bool startSin = false;
+    private bool StartSin = false;
     private float sinTimer = 0f;
-    private float startY;
+    private float StartY;
     private bool leftMouseDown = false;
 
     public GameObject Lborder;
@@ -31,11 +31,11 @@ public class CounterMovement : MonoBehaviour
     public AudioClip walk;
 
     public List<GameObject> itemHolder  = new List<GameObject>();
-    void Start()
+    void Awake()
     {
         temp = MainCharacter.transform.position;
         pos = MainCharacter.transform.position;
-        startY = pos.y;
+        StartY = pos.y;
         CLA = GetComponent<CharacterLookAt>();
         SR = GetComponent<SpriteRenderer>();
 
@@ -61,7 +61,7 @@ public class CounterMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (startSin) sinTimer += Time.deltaTime;
+        if (StartSin) sinTimer += Time.deltaTime;
         MainCharacter.transform.position = Vector3.MoveTowards(MainCharacter.transform.position, temp, speed);
      
         
@@ -77,8 +77,8 @@ public class CounterMovement : MonoBehaviour
 
         if (Mathf.Abs(tempFloat) < 0.5f)
         {
-            startSin = false;
-            temp.y = startY;
+            StartSin = false;
+            temp.y = StartY;
         }
         if (leftMouseDown)
         {
@@ -115,7 +115,7 @@ public class CounterMovement : MonoBehaviour
                     temp.x = pos.x;
                     speedTemp = Mathf.Abs((MainCharacter.transform.position - temp).magnitude) / speed;
                     freqOfSin = (MainCharacter.transform.position.x - temp.x);
-                    startSin = true;
+                    StartSin = true;
                     sinTimer = 0f;
 
                     //change look at
